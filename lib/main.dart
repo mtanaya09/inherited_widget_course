@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:inherited_widget_course/inherited_widget.dart';
+import 'package:state_management_part_2/inherited_model.dart';
+import 'package:state_management_part_2/inherited_widget.dart';
 
 void main() {
   runApp(
@@ -8,11 +9,11 @@ void main() {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: ApiProvider(
-        api: Api(),
-        child: const MyInheritWidget(),
-      ),
-      
+      // home: ApiProvider(
+      //   api: Api(),
+      //   child: const MyInheritWidget(),
+      // ),
+      home: const MyInheritModel(),
     ),
   );
 }
