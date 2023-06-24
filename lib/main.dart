@@ -20,11 +20,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String title = 'Tap the screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home KEL'),
+        title: Text(title),
+      ),
+      body: GestureDetector(
+        onTap: () {
+          setState(() {
+            title = DateTime.now().toIso8601String();
+          });
+        },
+        child: Container(
+          color: Colors.white,
+        ),
       ),
     );
   }
